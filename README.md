@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Frontend Mentor]()
-- Live Site URL: [GitHub Pages]()
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-four-card-feature-section-uVUvrVOioG)
+- Live Site URL: [GitHub Pages](https://wmvarga.github.io/four-card-feature-section-master/)
 
 ## My process
 
