@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img, svg {
+    width: 100%;
+    display: block;
+}
+
+:root {
+    --clr-200: hsl(234, 12%, 34%);
+    --clr-400: hsl(229, 6%, 66%);
+    --clr-600: hsl(0, 0%, 98%);
+
+    --clr-red: hsl(0, 78%, 62%);
+    --clr-cyan: hsl(180, 62%, 55%);
+    --clr-orange: hsl(34, 97%, 64%);
+    --clr-blue: hsl(212, 86%, 64%);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 15;
+    color: var(--clr-400);
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin-inline: auto;
+    padding-inline: 2em;
+    margin-bottom: 2em;
+}
+
+.wrapper--title {
+    max-width: 550px;
+    text-align: center;
+    margin-block: 3em;
+}
+
+.wrapper--title h1 {
+    color: var(--clr-200);
+    font-size: 1.5em;
+    font-weight: 200;
+    margin-bottom: 0.75em;
+}
+
+.wrapper--title h1 span {
+    font-weight: 600;
+    display: block;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-areas: 
+        "cyan"
+        "red"
+        "orange"
+        "blue";
+    gap: 2em;
+}
+
+.card-grid__card {
+    padding: 1.5em;
+    box-shadow: 0 5px 10px #dadada;
+    border-radius: 0.5em;
+}
+
+.card-grid__card h2 {
+    color: var(--clr-200);
+    margin-bottom: 0.5em;
+}
+
+.card-grid__card p {
+    margin-bottom: 2em;
+}
+
+.card-grid__card img {
+    margin-left: auto;
+    max-width: 58px;
+}
+
+.card-grid__card[data-color="cyan"] {
+    border-top: 5px solid var(--clr-cyan);
+    grid-area: cyan;
+}
+
+.card-grid__card[data-color="red"] {
+    border-top: 5px solid var(--clr-red);
+    grid-area: red;
+}
+
+.card-grid__card[data-color="orange"] {
+    border-top: 5px solid var(--clr-orange);
+    grid-area: orange;
+}
+
+.card-grid__card[data-color="blue"] {
+    border-top: 5px solid var(--clr-blue);
+    grid-area: blue;
+}
+
+@media (min-width: 1100px) {
+    .wrapper--title h1 {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            ". red ."
+            "cyan red blue"
+            "cyan orange blue"
+            ". orange .";
+    }
+}
